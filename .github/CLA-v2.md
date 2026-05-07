@@ -2,7 +2,7 @@
 
 Version: 2
 
-This Agreement is for your protection as a Contributor as well as the protection of the maintainers of the Open Archiver software; it does not change your rights to use your own Contributions for any other purpose. Open Archiver is developed and maintained by LogicLabs OÜ, a private limited company established under the laws of the Republic of Estonia.
+This Agreement is for your protection as a Contributor as well as the protection of the maintainers of the ProofArchiveSender software; it does not change your rights to use your own Contributions for any other purpose. ProofArchiveSender is developed and maintained by LogicLabs OÜ, a private limited company established under the laws of the Republic of Estonia.
 
 You accept and agree to the following terms and conditions for Your present and future Contributions submitted to LogicLabs OÜ. Except for the license granted herein to LogicLabs OÜ and recipients of software distributed by LogicLabs OÜ, You reserve all right, title, and interest in and to Your Contributions.
 

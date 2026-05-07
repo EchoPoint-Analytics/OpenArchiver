@@ -1,12 +1,12 @@
-# documentation: https://openarchiver.com
+# documentation: https://ProofArchiveSender.com
 # slogan: A self-hosted, open-source email archiving solution with full-text search capability.
 # tags: email archiving,email,compliance,search
-# logo: svgs/openarchiver.svg
+# logo: svgs/ProofArchiveSender.svg
 # port: 3000
 
 services:
-    open-archiver:
-        image: logiclabshq/open-archiver:latest
+    ProofArchiveSender:
+        image: logiclabshq/ProofArchiveSender:latest
         environment:
             - SERVICE_URL_3000
             - SERVICE_URL=${SERVICE_URL_3000}
@@ -26,7 +26,7 @@ services:
             - REDIS_PASSWORD=${SERVICE_PASSWORD_VALKEY}
             - REDIS_TLS_ENABLED=false
             - STORAGE_TYPE=${STORAGE_TYPE:-local}
-            - STORAGE_LOCAL_ROOT_PATH=${STORAGE_LOCAL_ROOT_PATH:-/var/data/open-archiver}
+            - STORAGE_LOCAL_ROOT_PATH=${STORAGE_LOCAL_ROOT_PATH:-/var/data/ProofArchiveSender}
             - BODY_SIZE_LIMIT=${BODY_SIZE_LIMIT:-100M}
             - STORAGE_S3_ENDPOINT=${STORAGE_S3_ENDPOINT}
             - STORAGE_S3_BUCKET=${STORAGE_S3_BUCKET}
@@ -40,7 +40,7 @@ services:
             - RATE_LIMIT_WINDOW_MS=${RATE_LIMIT_WINDOW_MS:-60000}
             - RATE_LIMIT_MAX_REQUESTS=${RATE_LIMIT_MAX_REQUESTS:-100}
         volumes:
-            - archiver-data:/var/data/open-archiver
+            - archiver-data:/var/data/ProofArchiveSender
         depends_on:
             postgres:
                 condition: service_healthy

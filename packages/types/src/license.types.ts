@@ -1,7 +1,7 @@
 /**
- * Features of Open Archiver Enterprise
+ * Features of ProofArchiveSender Enterprise
  */
-export enum OpenArchiverFeature {
+export enum ProofArchiveSenderFeature {
 	AUDIT_LOG = 'audit-log',
 	RETENTION_POLICY = 'retention-policy',
 	LEGAL_HOLDS = 'legal-holds',
@@ -19,7 +19,7 @@ export interface LicenseFilePayload {
 	licenseId: string; // UUID linking to the License Server
 	customerName: string;
 	planSeats: number;
-	features: OpenArchiverFeature[];
+	features: ProofArchiveSenderFeature[];
 	expiresAt: string; // ISO 8601
 	issuedAt: string; // ISO 8601
 }
@@ -32,7 +32,7 @@ export interface LicensePingRequest {
 	licenseId: string;
 	/** Current number of unique archived mailboxes on this instance. */
 	activeSeats: number;
-	/** Version string of the running Open Archiver instance. */
+	/** Version string of the running ProofArchiveSender instance. */
 	version: string;
 }
 
@@ -90,6 +90,6 @@ export interface ConsolidatedLicenseStatus {
 	activeSeats: number;
 	isExpired: boolean;
 	features: {
-		[key in OpenArchiverFeature]?: boolean;
+		[key in ProofArchiveSenderFeature]?: boolean;
 	};
 }

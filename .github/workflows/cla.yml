@@ -24,7 +24,7 @@ jobs:
                   PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
               with:
                   path-to-signatures: 'signatures/version2/cla.json'
-                  path-to-document: 'https://github.com/LogicLabs-OU/OpenArchiver/blob/main/.github/CLA-v2.md'
+                  path-to-document: 'https://github.com/LogicLabs-OU/ProofArchiveSender/blob/main/.github/CLA-v2.md'
                   branch: 'main'
                   allowlist: 'wayneshn'
 

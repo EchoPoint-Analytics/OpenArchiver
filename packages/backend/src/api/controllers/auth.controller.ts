@@ -7,7 +7,7 @@ import * as schema from '../../database/schema';
 import { eq, sql } from 'drizzle-orm';
 import 'dotenv/config';
 import { AuthorizationService } from '../../services/AuthorizationService';
-import { CaslPolicy } from '@open-archiver/types';
+import { CaslPolicy } from '@ProofArchiveSender/types';
 
 export class AuthController {
 	#authService: AuthService;

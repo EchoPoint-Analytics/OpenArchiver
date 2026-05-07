@@ -4,7 +4,7 @@ import {
 	EmailDocument,
 	EmailObject,
 	PendingEmail,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 import { SearchService } from './SearchService';
 import { StorageService } from './StorageService';
 import { extractText } from '../helpers/textExtractor';

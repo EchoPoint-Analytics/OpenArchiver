@@ -13,7 +13,7 @@
 	import RetentionPolicyForm from '$lib/components/custom/RetentionPolicyForm.svelte';
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
-	import type { RetentionPolicy, PolicyEvaluationResult } from '@open-archiver/types';
+	import type { RetentionPolicy, PolicyEvaluationResult } from '@ProofArchiveSender/types';
 
 	let { data, form }: { data: PageData; form: ActionData } = $props();
 
@@ -66,7 +66,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.retention_policies.title')} - Open Archiver</title>
+	<title>{$t('app.retention_policies.title')} - ProofArchiveSender</title>
 	<meta name="description" content={$t('app.retention_policies.meta_description')} />
 	<meta
 		name="keywords"

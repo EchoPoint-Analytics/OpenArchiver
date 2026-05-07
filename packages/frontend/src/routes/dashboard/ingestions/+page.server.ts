@@ -1,6 +1,6 @@
 import { api } from '$lib/server/api';
 import type { PageServerLoad } from './$types';
-import type { SafeIngestionSource } from '@open-archiver/types';
+import type { SafeIngestionSource } from '@ProofArchiveSender/types';
 import { error } from '@sveltejs/kit';
 export const load: PageServerLoad = async (event) => {
 	const response = await api('/ingestion-sources', event);

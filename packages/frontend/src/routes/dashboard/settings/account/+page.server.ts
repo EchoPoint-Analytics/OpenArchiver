@@ -1,7 +1,7 @@
 import type { PageServerLoad, Actions } from './$types';
 import { api } from '$lib/server/api';
 import { fail } from '@sveltejs/kit';
-import type { User } from '@open-archiver/types';
+import type { User } from '@ProofArchiveSender/types';
 
 export const load: PageServerLoad = async (event) => {
 	const response = await api('/users/profile', event);

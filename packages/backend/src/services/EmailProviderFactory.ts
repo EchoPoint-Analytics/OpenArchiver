@@ -9,7 +9,7 @@ import type {
 	EmailObject,
 	SyncState,
 	MailboxUser,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 import { GoogleWorkspaceConnector } from './ingestion-connectors/GoogleWorkspaceConnector';
 import { MicrosoftConnector } from './ingestion-connectors/MicrosoftConnector';
 import { ImapConnector } from './ingestion-connectors/ImapConnector';

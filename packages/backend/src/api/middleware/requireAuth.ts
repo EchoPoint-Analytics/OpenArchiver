@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from 'express';
 import type { AuthService } from '../../services/AuthService';
-import type { AuthTokenPayload } from '@open-archiver/types';
+import type { AuthTokenPayload } from '@ProofArchiveSender/types';
 import 'dotenv/config';
 import { ApiKeyService } from '../../services/ApiKeyService';
 import { UserService } from '../../services/UserService';

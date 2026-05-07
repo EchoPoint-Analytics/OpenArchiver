@@ -1,5 +1,5 @@
 {
-	"name": "open-archiver-app",
+	"name": "ProofArchiveSender-app",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -8,7 +8,7 @@
 		"start": "node dist/index.js"
 	},
 	"dependencies": {
-		"@open-archiver/backend": "workspace:*",
+		"@ProofArchiveSender/backend": "workspace:*",
 		"dotenv": "^17.2.0"
 	},
 	"devDependencies": {

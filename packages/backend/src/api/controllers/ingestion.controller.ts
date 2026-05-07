@@ -5,7 +5,7 @@ import {
 	UpdateIngestionSourceDto,
 	IngestionSource,
 	SafeIngestionSource,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 import { logger } from '../../config/logger';
 import { UserService } from '../../services/UserService';
 import { checkDeletionEnabled } from '../../helpers/deletionGuard';

@@ -1,6 +1,6 @@
 import { Job } from 'bullmq';
 import { IngestionService } from '../../services/IngestionService';
-import { IContinuousSyncJob } from '@open-archiver/types';
+import { IContinuousSyncJob } from '@ProofArchiveSender/types';
 import { EmailProviderFactory } from '../../services/EmailProviderFactory';
 import { ingestionQueue } from '../queues';
 import { SyncSessionService } from '../../services/SyncSessionService';

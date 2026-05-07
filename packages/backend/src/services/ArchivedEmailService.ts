@@ -13,13 +13,13 @@ import type {
 	ArchivedEmail,
 	Recipient,
 	ThreadEmail,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 import { StorageService } from './StorageService';
 import { SearchService } from './SearchService';
 import { IngestionService } from './IngestionService';
 import type { Readable } from 'stream';
 import { AuditService } from './AuditService';
-import { User } from '@open-archiver/types';
+import { User } from '@ProofArchiveSender/types';
 import { checkDeletionEnabled } from '../helpers/deletionGuard';
 import { RetentionHook } from '../hooks/RetentionHook';
 import { logger } from '../config/logger';

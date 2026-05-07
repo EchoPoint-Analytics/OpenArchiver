@@ -2,7 +2,7 @@ import { db } from '../database';
 import * as schema from '../database/schema';
 import { eq, sql } from 'drizzle-orm';
 import { hash, compare } from 'bcryptjs';
-import type { CaslPolicy, User } from '@open-archiver/types';
+import type { CaslPolicy, User } from '@ProofArchiveSender/types';
 import { AuditService } from './AuditService';
 
 export class UserService {

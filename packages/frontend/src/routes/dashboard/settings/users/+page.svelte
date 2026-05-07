@@ -8,7 +8,7 @@
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
 	import UserForm from '$lib/components/custom/UserForm.svelte';
 	import { api } from '$lib/api.client';
-	import type { User } from '@open-archiver/types';
+	import type { User } from '@ProofArchiveSender/types';
 	import { t } from '$lib/translations';
 
 	let { data }: { data: PageData } = $props();
@@ -104,7 +104,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.users.title')} - OpenArchiver</title>
+	<title>{$t('app.users.title')} - ProofArchiveSender</title>
 </svelte:head>
 
 <div class="">

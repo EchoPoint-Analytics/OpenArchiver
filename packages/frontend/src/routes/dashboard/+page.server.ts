@@ -7,7 +7,7 @@ import type {
 	IngestionSourceStats,
 	RecentSync,
 	IndexedInsights,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 
 export const load: PageServerLoad = async (event) => {
 	const fetchStats = async (): Promise<DashboardStats | null> => {

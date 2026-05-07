@@ -1,4 +1,4 @@
-# Open Archiver
+# ProofArchiveSender
 
 [![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -9,34 +9,34 @@
 
 **A secure, sovereign, and open-source platform for email archiving.**
 
-Open Archiver provides a robust, self-hosted solution for archiving, storing, indexing, and searching emails from major platforms, including Google Workspace (Gmail), Microsoft 365, PST files, as well as generic IMAP-enabled email inboxes. Use Open Archiver to keep a permanent, tamper-proof record of your communication history, free from vendor lock-in.
+ProofArchiveSender provides a robust, self-hosted solution for archiving, storing, indexing, and searching emails from major platforms, including Google Workspace (Gmail), Microsoft 365, PST files, as well as generic IMAP-enabled email inboxes. Use ProofArchiveSender to keep a permanent, tamper-proof record of your communication history, free from vendor lock-in.
 
 ## Screenshots
 
-![Open Archiver Preview](assets/screenshots/dashboard-1.png)
+![ProofArchiveSender Preview](assets/screenshots/dashboard-1.png)
 _Dashboard_
 
-![Open Archiver Preview](assets/screenshots/archived-emails.png)
+![ProofArchiveSender Preview](assets/screenshots/archived-emails.png)
 _Archived emails_
 
-![Open Archiver Preview](assets/screenshots/search.png)
+![ProofArchiveSender Preview](assets/screenshots/search.png)
 _Full-text search across all your emails and attachments_
 
 ## Join our community!
 
-We are committed to building an engaging community around Open Archiver, and we are inviting all of you to join our community on Discord to get real-time support and connect with the team.
+We are committed to building an engaging community around ProofArchiveSender, and we are inviting all of you to join our community on Discord to get real-time support and connect with the team.
 
 [![Discord](https://img.shields.io/badge/Join%20our%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/MTtD7BhuTQ)
 
-[![Bluesky](https://img.shields.io/badge/Follow%20us%20on%20Bluesky-0265D4?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/openarchiver.bsky.social)
+[![Bluesky](https://img.shields.io/badge/Follow%20us%20on%20Bluesky-0265D4?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/ProofArchiveSender.bsky.social)
 
 ## 🚀 Live demo
 
-Check out the live demo here: https://demo.openarchiver.com
+Check out the live demo here: https://demo.ProofArchiveSender.com
 
-Username: demo@openarchiver.com
+Username: demo@ProofArchiveSender.com
 
-Password: openarchiver_demo
+Password: ProofArchiveSender_demo
 
 ## Key Features
 
@@ -59,7 +59,7 @@ Password: openarchiver_demo
 
 ## Tech Stack
 
-Open Archiver is built on a modern, scalable, and maintainable technology stack:
+ProofArchiveSender is built on a modern, scalable, and maintainable technology stack:
 
 - **Frontend**: SvelteKit with Svelte 5
 - **Backend**: Node.js with Express.js & TypeScript
@@ -80,8 +80,8 @@ Open Archiver is built on a modern, scalable, and maintainable technology stack:
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/LogicLabs-OU/OpenArchiver.git
-    cd OpenArchiver
+    git clone https://github.com/LogicLabs-OU/ProofArchiveSender.git
+    cd ProofArchiveSender
     ```
 
 2.  **Configure your environment:**
@@ -102,15 +102,15 @@ Open Archiver is built on a modern, scalable, and maintainable technology stack:
     This command will pull the pre-built Docker images and start all the services (frontend, backend, database, etc.) in the background.
 
 4.  **Access the application:**
-    Once the services are running, you can access the Open Archiver web interface by navigating to `http://localhost:3000` in your web browser.
+    Once the services are running, you can access the ProofArchiveSender web interface by navigating to `http://localhost:3000` in your web browser.
 
 ## Data Source Configuration
 
 After deploying the application, you will need to configure one or more ingestion sources to begin archiving emails. Follow our detailed guides to connect to your email provider:
 
-- [Connecting to Google Workspace](https://docs.openarchiver.com/user-guides/email-providers/google-workspace.html)
-- [Connecting to Microsoft 365](https://docs.openarchiver.com/user-guides/email-providers/imap.html)
-- [Connecting to a Generic IMAP Server](https://docs.openarchiver.com/user-guides/email-providers/imap.html)
+- [Connecting to Google Workspace](https://docs.ProofArchiveSender.com/user-guides/email-providers/google-workspace.html)
+- [Connecting to Microsoft 365](https://docs.ProofArchiveSender.com/user-guides/email-providers/imap.html)
+- [Connecting to a Generic IMAP Server](https://docs.ProofArchiveSender.com/user-guides/email-providers/imap.html)
 
 ## Contributing
 
@@ -124,4 +124,4 @@ Please read our `CONTRIBUTING.md` file for more details on our code of conduct a
 
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=LogicLabs-OU/OpenArchiver&type=Date)](https://www.star-history.com/#LogicLabs-OU/OpenArchiver&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=LogicLabs-OU/ProofArchiveSender&type=Date)](https://www.star-history.com/#LogicLabs-OU/ProofArchiveSender&Date)

@@ -10,7 +10,7 @@
 	import { api } from '$lib/api.client';
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
 	import * as HoverCard from '$lib/components/ui/hover-card/index.js';
-	import type { AuditLogAction, AuditLogEntry } from '@open-archiver/types';
+	import type { AuditLogAction, AuditLogEntry } from '@ProofArchiveSender/types';
 	import * as Dialog from '$lib/components/ui/dialog/index.js';
 	import { Label } from '$lib/components/ui/label';
 	import * as Pagination from '$lib/components/ui/pagination/index.js';
@@ -93,7 +93,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.audit_log.title')} - OpenArchiver</title>
+	<title>{$t('app.audit_log.title')} - ProofArchiveSender</title>
 </svelte:head>
 
 <div class="mb-4 flex items-center justify-between">

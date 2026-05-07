@@ -35,7 +35,7 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                   context: .
-                  file: ./apps/open-archiver/Dockerfile
+                  file: ./apps/ProofArchiveSender/Dockerfile
                   platforms: linux/amd64,linux/arm64
                   push: true
-                  tags: logiclabshq/open-archiver:${{ steps.sha.outputs.sha }}
+                  tags: logiclabshq/ProofArchiveSender:${{ steps.sha.outputs.sha }}

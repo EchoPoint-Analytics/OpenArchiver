@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.setup.title')} - Open Archiver</title>
+	<title>{$t('app.setup.title')} - ProofArchiveSender</title>
 	<meta name="description" content={$t('app.setup.description')} />
 </svelte:head>
 
@@ -55,12 +55,12 @@
 >
 	<div>
 		<a
-			href="https://openarchiver.com/"
+			href="https://ProofArchiveSender.com/"
 			target="_blank"
 			class="flex flex-row items-center gap-2 font-bold"
 		>
-			<img src="/logos/logo-sq.svg" alt="OpenArchiver Logo" class="h-16 w-16" />
-			<span class="text-2xl">Open Archiver</span>
+			<img src="/logos/logo-sq.svg" alt="ProofArchiveSender Logo" class="h-16 w-16" />
+			<span class="text-2xl">ProofArchiveSender</span>
 		</a>
 	</div>
 	<Card.Root class="w-full max-w-md">

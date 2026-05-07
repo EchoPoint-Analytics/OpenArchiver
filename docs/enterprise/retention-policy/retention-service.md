@@ -137,5 +137,5 @@ The `RetentionPolicyModule` (`retention-policy.module.ts`) implements the `Archi
 All routes are protected by:
 
 1. `requireAuth` — Ensures the request includes a valid authentication token.
-2. `featureEnabled(OpenArchiverFeature.RETENTION_POLICY)` — Ensures the enterprise license includes the retention policy feature.
+2. `featureEnabled(ProofArchiveSenderFeature.RETENTION_POLICY)` — Ensures the enterprise license includes the retention policy feature.
 3. `requirePermission('manage', 'all')` — Ensures the user has administrative permissions.

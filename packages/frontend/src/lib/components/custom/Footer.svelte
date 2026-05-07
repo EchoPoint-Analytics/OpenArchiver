@@ -27,7 +27,7 @@
 			{/if}
 			<p class="text-balance text-center text-xs font-medium leading-loose">
 				© {new Date().getFullYear()}
-				<a href="https://openarchiver.com/" target="_blank">Open Archiver</a>
+				<a href="https://ProofArchiveSender.com/" target="_blank">ProofArchiveSender</a>
 			</p>
 			<p class="text-balance text-center text-xs font-medium leading-loose">
 				Version: {currentVersion}

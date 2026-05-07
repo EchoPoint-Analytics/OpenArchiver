@@ -1,4 +1,4 @@
-import { IStorageProvider, StorageConfig } from '@open-archiver/types';
+import { IStorageProvider, StorageConfig } from '@ProofArchiveSender/types';
 import { LocalFileSystemProvider } from './storage/LocalFileSystemProvider';
 import { S3StorageProvider } from './storage/S3StorageProvider';
 import { config } from '../config/index';
@@ -7,7 +7,7 @@ import { streamToBuffer } from '../helpers/streamToBuffer';
 import { Readable } from 'stream';
 
 /**
- *  A unique identifier for Open Archiver encrypted files. This value SHOULD NOT BE ALTERED in future development to ensure compatibility.
+ *  A unique identifier for ProofArchiveSender encrypted files. This value SHOULD NOT BE ALTERED in future development to ensure compatibility.
  */
 const ENCRYPTION_PREFIX = Buffer.from('oa_enc_idf_v1::');
 

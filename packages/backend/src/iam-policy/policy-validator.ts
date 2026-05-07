@@ -1,4 +1,4 @@
-import type { CaslPolicy, AppActions, AppSubjects } from '@open-archiver/types';
+import type { CaslPolicy, AppActions, AppSubjects } from '@ProofArchiveSender/types';
 
 // Create sets of valid actions and subjects for efficient validation
 const validActions: Set<AppActions> = new Set([

@@ -1,6 +1,6 @@
 # Installation Guide
 
-This guide will walk you through setting up Open Archiver using Docker Compose. This is the recommended method for deploying the application.
+This guide will walk you through setting up ProofArchiveSender using Docker Compose. This is the recommended method for deploying the application.
 
 ## Prerequisites
 
@@ -10,24 +10,24 @@ This guide will walk you through setting up Open Archiver using Docker Compose. 
 
 ## 1. Clone the Repository
 
-First, clone the Open Archiver repository to your machine:
+First, clone the ProofArchiveSender repository to your machine:
 
 ```bash
-git clone https://github.com/LogicLabs-OU/OpenArchiver.git
-cd OpenArchiver
+git clone https://github.com/LogicLabs-OU/ProofArchiveSender.git
+cd ProofArchiveSender
 ```
 
 ## 2. Create a Directory for Local Storage (Important)
 
-Before configuring the application, you **must** create a directory on your host machine where Open Archiver will store its data (such as emails and attachments). Manually creating this directory helps prevent potential permission issues.
+Before configuring the application, you **must** create a directory on your host machine where ProofArchiveSender will store its data (such as emails and attachments). Manually creating this directory helps prevent potential permission issues.
 
-Foe examples, you can use this path `/var/data/open-archiver`.
+Foe examples, you can use this path `/var/data/proofarchivsender`.
 
 Run the following commands to create the directory and set the correct permissions:
 
 ```bash
-sudo mkdir -p /var/data/open-archiver
-sudo chown -R $(id -u):$(id -g) /var/data/open-archiver
+sudo mkdir -p /var/data/proofarchivsender
+sudo chown -R $(id -u):$(id -g) /var/data/proofarchivsender
 ```
 
 This ensures the directory is owned by your current user, which is necessary for the application to have write access. You will set this path in your `.env` file in the next step.
@@ -49,7 +49,7 @@ Now, open the `.env` file in a text editor and customize the settings.
 1.  **Set the Storage Path**: Find the `STORAGE_LOCAL_ROOT_PATH` variable and set it to the path you just created.
 
     ```env
-    STORAGE_LOCAL_ROOT_PATH=/var/data/open-archiver
+    STORAGE_LOCAL_ROOT_PATH=/var/data/proofarchivsender
     ```
 
 2.  **Secure Your Instance**: You must change the following placeholder values to secure your instance:
@@ -82,7 +82,7 @@ To do so:
 1.  **Update your `.env` file**: Change the host, port, and credential variables to point to your external service instances. For example, you would update `DATABASE_URL`, `REDIS_HOST`, and `MEILI_HOST`.
 2.  **Modify `docker-compose.yml`**: Remove or comment out the service definitions for `postgres`, `valkey`, and `meilisearch` from your `docker-compose.yml` file.
 
-This will configure the Open Archiver application to connect to your services instead of starting the default ones.
+This will configure the ProofArchiveSender application to connect to your services instead of starting the default ones.
 
 ### Environment Variable Reference
 
@@ -125,7 +125,7 @@ These variables are used by `docker-compose.yml` to configure the services.
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------- | ------------------------- |
 | `STORAGE_TYPE`                 | The storage backend to use (`local` or `s3`).                                                               | `local`                   |
 | `BODY_SIZE_LIMIT`              | The maximum request body size for uploads. Can be a number in bytes or a string with a unit (e.g., `100M`). | `100M`                    |
-| `STORAGE_LOCAL_ROOT_PATH`      | The root path for Open Archiver app data.                                                                   | `/var/data/open-archiver` |
+| `STORAGE_LOCAL_ROOT_PATH`      | The root path for ProofArchiveSender app data.                                                                   | `/var/data/proofarchivsender` |
 | `STORAGE_S3_ENDPOINT`          | The endpoint for S3-compatible storage (required if `STORAGE_TYPE` is `s3`).                                |                           |
 | `STORAGE_S3_BUCKET`            | The bucket name for S3-compatible storage (required if `STORAGE_TYPE` is `s3`).                             |                           |
 | `STORAGE_S3_ACCESS_KEY_ID`     | The access key ID for S3-compatible storage (required if `STORAGE_TYPE` is `s3`).                           |                           |
@@ -174,7 +174,7 @@ docker compose ps
 
 ## 5. Access the Application
 
-Once the services are running, you can access the Open Archiver web interface by navigating to `http://localhost:3000` in your web browser.
+Once the services are running, you can access the ProofArchiveSender web interface by navigating to `http://localhost:3000` in your web browser.
 
 Upon first visit, you will be redirected to the `/setup` page where you can set up your admin account. Make sure you are the first person who accesses the instance.
 
@@ -182,7 +182,7 @@ If you are not redirected to the `/setup` page but instead see the login page, t
 
 ## 6. Next Steps
 
-After successfully deploying and logging into Open Archiver, the next step is to configure your ingestion sources to start archiving emails.
+After successfully deploying and logging into ProofArchiveSender, the next step is to configure your ingestion sources to start archiving emails.
 
 - [Connecting to Google Workspace](./email-providers/google-workspace.md)
 - [Connecting to Microsoft 365](./email-providers/microsoft-365.md)
@@ -190,7 +190,7 @@ After successfully deploying and logging into Open Archiver, the next step is to
 
 ## Updating Your Installation
 
-To update your Open Archiver instance to the latest version, run the following commands:
+To update your ProofArchiveSender instance to the latest version, run the following commands:
 
 ```bash
 # Pull the latest changes from the repository
@@ -205,7 +205,7 @@ docker compose up -d
 
 ## Deploying on Coolify
 
-If you are deploying Open Archiver on [Coolify](https://coolify.io/), it is recommended to let Coolify manage the Docker networks for you. This can help avoid potential routing conflicts and simplify your setup.
+If you are deploying ProofArchiveSender on [Coolify](https://coolify.io/), it is recommended to let Coolify manage the Docker networks for you. This can help avoid potential routing conflicts and simplify your setup.
 
 To do this, you will need to make a small modification to your `docker-compose.yml` file.
 
@@ -216,25 +216,25 @@ To do this, you will need to make a small modification to your `docker-compose.y
 2.  **Remove all `networks` sections** from the file. This includes the network configuration for each service and the top-level network definition.
 
     Specifically, you need to remove:
-    - The `networks: - open-archiver-net` lines from the `open-archiver`, `postgres`, `valkey`, and `meilisearch` services.
+    - The `networks: - proofarchivsender-net` lines from the `proofarchivsender`, `postgres`, `valkey`, and `meilisearch` services.
     - The entire `networks:` block at the end of the file.
 
     Here is an example of what to remove from a service:
 
     ```diff
     services:
-      open-archiver:
-        image: logiclabshq/open-archiver:latest
+      proofarchivsender:
+        image: logiclabshq/proofarchivsender:latest
         # ... other settings
     -   networks:
-    -     - open-archiver-net
+    -     - proofarchivsender-net
     ```
 
     And remove this entire block from the end of the file:
 
     ```diff
     - networks:
-    -   open-archiver-net:
+    -   proofarchivsender-net:
     -     driver: bridge
     ```
 
@@ -246,7 +246,7 @@ After making these changes, you can proceed with deploying your application on C
 
 ## Where is my data stored (When using local storage and Docker)?
 
-If you are using local storage to store your emails, based on your `docker-compose.yml` file, your data is being stored in what's called a "named volume" (`archiver-data`). That's why you're not seeing the files in the `./data/open-archiver` directory you created.
+If you are using local storage to store your emails, based on your `docker-compose.yml` file, your data is being stored in what's called a "named volume" (`archiver-data`). That's why you're not seeing the files in the `./data/proofarchivsender` directory you created.
 
 1.  **List all Docker volumes**:
 
@@ -258,7 +258,7 @@ docker volume ls
 
 2.  **Identify the correct volume**:
 
-Look through the list for a volume name that ends with `_archiver-data`. The part before that will be your project's directory name. For example, if your project is in a folder named `OpenArchiver`, the volume will be `openarchiver_archiver-data` But it can be a randomly generated hash.
+Look through the list for a volume name that ends with `_archiver-data`. The part before that will be your project's directory name. For example, if your project is in a folder named `ProofArchiveSender`, the volume will be `ProofArchiveSender_archiver-data` But it can be a randomly generated hash.
 
 3.  **Inspect the correct volume**:
 
@@ -297,26 +297,26 @@ Here’s how you can do it:
 
 1.  **Edit `docker-compose.yml`**:
 
-Open the `docker-compose.yml` file and find the `open-archiver` service. You're going to change the `volumes` section.
+Open the `docker-compose.yml` file and find the `proofarchivsender` service. You're going to change the `volumes` section.
 
 **Change this:**
 
 ```yaml
 services:
-    open-archiver:
+    proofarchivsender:
     # ... other config
     volumes:
-        - archiver-data:/var/data/open-archiver
+        - archiver-data:/var/data/proofarchivsender
 ```
 
 **To this:**
 
 ```yaml
 services:
-    open-archiver:
+    proofarchivsender:
     # ... other config
     volumes:
-        - ./data/open-archiver:/var/data/open-archiver
+        - ./data/proofarchivsender:/var/data/proofarchivsender
 ```
 
 You'll also want to remove the `archiver-data` volume definition at the bottom of the file, since it's no longer needed.
@@ -338,4 +338,4 @@ After you've saved the changes, run the following command in your terminal to ap
 docker-compose up -d --force-recreate
 ```
 
-After this, any new data will be saved directly into the `./data/open-archiver` folder in your project directory.
+After this, any new data will be saved directly into the `./data/proofarchivsender` folder in your project directory.

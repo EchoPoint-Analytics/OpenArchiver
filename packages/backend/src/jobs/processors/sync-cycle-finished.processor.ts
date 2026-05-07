@@ -2,7 +2,7 @@ import { Job } from 'bullmq';
 import { IngestionService } from '../../services/IngestionService';
 import { SyncSessionService } from '../../services/SyncSessionService';
 import { logger } from '../../config/logger';
-import { IngestionStatus } from '@open-archiver/types';
+import { IngestionStatus } from '@ProofArchiveSender/types';
 
 interface ISyncCycleFinishedJob {
 	ingestionSourceId: string;

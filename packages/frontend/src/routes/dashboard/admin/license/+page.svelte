@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.license_page.title')} - Open Archiver</title>
+	<title>{$t('app.license_page.title')} - ProofArchiveSender</title>
 	<meta name="description" content={$t('app.license_page.meta_description')} />
 </svelte:head>
 

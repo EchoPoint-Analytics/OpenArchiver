@@ -1,7 +1,7 @@
 import { api } from '$lib/server/api';
 import { error, type NumericRange } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import type { IGetQueueJobsResponse, JobStatus } from '@open-archiver/types';
+import type { IGetQueueJobsResponse, JobStatus } from '@ProofArchiveSender/types';
 
 export const load: PageServerLoad = async (event) => {
 	const { queueName } = event.params;

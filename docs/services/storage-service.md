@@ -24,7 +24,7 @@ When `STORAGE_TYPE` is set to `local`, you must also provide the root path where
 ```env
 # .env
 STORAGE_TYPE=local
-STORAGE_LOCAL_ROOT_PATH=/var/data/open-archiver
+STORAGE_LOCAL_ROOT_PATH=/var/data/proofarchivsender
 ```
 
 - `STORAGE_LOCAL_ROOT_PATH`: The absolute path on the server where the archive will be created. The service will create subdirectories within this path as needed.

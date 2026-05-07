@@ -4,7 +4,7 @@ import { eq } from 'drizzle-orm';
 import { StorageService } from './StorageService';
 import { createHash } from 'crypto';
 import { logger } from '../config/logger';
-import type { IntegrityCheckResult } from '@open-archiver/types';
+import type { IntegrityCheckResult } from '@ProofArchiveSender/types';
 import { streamToBuffer } from '../helpers/streamToBuffer';
 
 export class IntegrityService {

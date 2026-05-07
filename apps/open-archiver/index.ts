@@ -1,4 +1,4 @@
-import { createServer, logger } from '@open-archiver/backend';
+import { createServer, logger } from '@ProofArchiveSender/backend';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -14,7 +14,7 @@ async function start() {
 	const app = await createServer([]);
 
 	app.listen(PORT_BACKEND, () => {
-		logger.info({}, `✅ Open Archiver (OSS) running on port ${PORT_BACKEND}`);
+		logger.info({}, `✅ ProofArchiveSender (OSS) running on port ${PORT_BACKEND}`);
 	});
 }
 

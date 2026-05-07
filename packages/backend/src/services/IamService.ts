@@ -1,6 +1,6 @@
 import { db } from '../database';
 import { roles, userRoles, users } from '../database/schema/users';
-import type { Role, CaslPolicy, User } from '@open-archiver/types';
+import type { Role, CaslPolicy, User } from '@ProofArchiveSender/types';
 import { eq } from 'drizzle-orm';
 import { createAbilityFor, AppAbility } from '../iam-policy/ability';
 

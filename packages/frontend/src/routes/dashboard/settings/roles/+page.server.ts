@@ -1,5 +1,5 @@
 import { api } from '$lib/server/api';
-import type { Role } from '@open-archiver/types';
+import type { Role } from '@ProofArchiveSender/types';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 

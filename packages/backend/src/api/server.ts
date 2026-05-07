@@ -34,11 +34,11 @@ import path from 'path';
 import { logger } from '../config/logger';
 import { rateLimiter } from './middleware/rateLimiter';
 import { config } from '../config';
-import { OpenArchiverFeature } from '@open-archiver/types';
+import { ProofArchiveSenderFeature } from '@ProofArchiveSender/types';
 // Define the "plugin" interface
 export interface ArchiverModule {
 	initialize: (app: Express, authService: AuthService) => Promise<void>;
-	name: OpenArchiverFeature;
+	name: ProofArchiveSenderFeature;
 }
 
 export let authService: AuthService;

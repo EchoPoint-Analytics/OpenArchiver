@@ -13,7 +13,7 @@
 	import { enhance } from '$app/forms';
 	import { MoreHorizontal, Plus } from 'lucide-svelte';
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
-	import type { RetentionLabel } from '@open-archiver/types';
+	import type { RetentionLabel } from '@ProofArchiveSender/types';
 
 	let { data, form }: { data: PageData; form: ActionData } = $props();
 
@@ -39,7 +39,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.retention_labels.title')} - Open Archiver</title>
+	<title>{$t('app.retention_labels.title')} - ProofArchiveSender</title>
 	<meta name="description" content={$t('app.retention_labels.meta_description')} />
 	<meta
 		name="keywords"

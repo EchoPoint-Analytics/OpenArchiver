@@ -1,7 +1,7 @@
 import { api } from '$lib/server/api';
 import { error, type NumericRange } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import type { IGetQueuesResponse } from '@open-archiver/types';
+import type { IGetQueuesResponse } from '@ProofArchiveSender/types';
 
 export const load: PageServerLoad = async (event) => {
 	try {

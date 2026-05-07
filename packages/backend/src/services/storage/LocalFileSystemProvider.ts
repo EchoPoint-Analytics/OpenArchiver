@@ -1,4 +1,4 @@
-import { IStorageProvider, LocalStorageConfig } from '@open-archiver/types';
+import { IStorageProvider, LocalStorageConfig } from '@ProofArchiveSender/types';
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import { createReadStream, createWriteStream } from 'fs';

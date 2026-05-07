@@ -1,6 +1,6 @@
 import { Job, Queue } from 'bullmq';
 import { ingestionQueue, indexingQueue } from '../jobs/queues';
-import { IJob, IQueueCounts, IQueueDetails, IQueueOverview, JobStatus } from '@open-archiver/types';
+import { IJob, IQueueCounts, IQueueDetails, IQueueOverview, JobStatus } from '@ProofArchiveSender/types';
 
 export class JobsService {
 	private queues: Queue[];

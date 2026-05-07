@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
-import type { User } from '@open-archiver/types';
+import type { User } from '@ProofArchiveSender/types';
 
 interface AuthState {
 	accessToken: string | null;

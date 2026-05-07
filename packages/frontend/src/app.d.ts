@@ -1,4 +1,4 @@
-import type { User } from '@open-archiver/types';
+import type { User } from '@ProofArchiveSender/types';
 
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces

@@ -3,7 +3,7 @@ import { IamService } from './IamService';
 import { rulesToQuery } from '@casl/ability/extra';
 import { mongoToDrizzle } from '../helpers/mongoToDrizzle';
 import { mongoToMeli } from '../helpers/mongoToMeli';
-import { AppActions, AppSubjects } from '@open-archiver/types';
+import { AppActions, AppSubjects } from '@ProofArchiveSender/types';
 
 export class FilterBuilder {
 	public static async create(

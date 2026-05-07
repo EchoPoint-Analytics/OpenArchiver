@@ -35,7 +35,7 @@ export const createStorageRouter = (
 	 *         description: The relative storage path of the file to download.
 	 *         schema:
 	 *           type: string
-	 *           example: "open-archiver/emails/abc123.eml"
+	 *           example: "ProofArchiveSender/emails/abc123.eml"
 	 *     responses:
 	 *       '200':
 	 *         description: The file content as a binary stream. The `Content-Disposition` header is set to trigger a browser download.

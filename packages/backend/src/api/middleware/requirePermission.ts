@@ -1,6 +1,6 @@
 import { AuthorizationService } from '../../services/AuthorizationService';
 import type { Request, Response, NextFunction } from 'express';
-import { AppActions, AppSubjects } from '@open-archiver/types';
+import { AppActions, AppSubjects } from '@ProofArchiveSender/types';
 
 export const requirePermission = (
 	action: AppActions,

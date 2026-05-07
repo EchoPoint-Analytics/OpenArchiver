@@ -1,6 +1,6 @@
 import { compare } from 'bcryptjs';
 import { SignJWT, jwtVerify } from 'jose';
-import type { AuthTokenPayload, LoginResponse } from '@open-archiver/types';
+import type { AuthTokenPayload, LoginResponse } from '@ProofArchiveSender/types';
 import { UserService } from './UserService';
 import { AuditService } from './AuditService';
 import { db } from '../database';

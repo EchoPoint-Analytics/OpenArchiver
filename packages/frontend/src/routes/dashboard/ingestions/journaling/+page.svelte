@@ -12,7 +12,7 @@
 	import { invalidateAll } from '$app/navigation';
 	import { MoreHorizontal, Plus, Radio, Mail, Copy, Check, RefreshCw } from 'lucide-svelte';
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
-	import type { JournalingSource } from '@open-archiver/types';
+	import type { JournalingSource } from '@ProofArchiveSender/types';
 
 	let { data }: { data: PageData; form: ActionData } = $props();
 
@@ -100,7 +100,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.journaling.title')} - Open Archiver</title>
+	<title>{$t('app.journaling.title')} - ProofArchiveSender</title>
 	<meta name="description" content={$t('app.journaling.meta_description')} />
 	<meta
 		name="keywords"

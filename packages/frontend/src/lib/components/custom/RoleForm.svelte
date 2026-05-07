@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Role, CaslPolicy } from '@open-archiver/types';
+	import type { Role, CaslPolicy } from '@ProofArchiveSender/types';
 	import { Button } from '$lib/components/ui/button';
 	import { Input } from '$lib/components/ui/input';
 	import { Textarea } from '$lib/components/ui/textarea';

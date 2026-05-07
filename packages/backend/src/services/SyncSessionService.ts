@@ -1,7 +1,7 @@
 import { db } from '../database';
 import { syncSessions, ingestionSources } from '../database/schema';
 import { eq, lt, sql } from 'drizzle-orm';
-import type { SyncState, ProcessMailboxError } from '@open-archiver/types';
+import type { SyncState, ProcessMailboxError } from '@ProofArchiveSender/types';
 import { logger } from '../config/logger';
 
 export interface SyncSessionRecord {

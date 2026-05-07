@@ -5,13 +5,13 @@ import type {
 	RetentionPolicy,
 	PolicyEvaluationResult,
 	SafeIngestionSource,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 
 export const load: PageServerLoad = async (event) => {
 	if (!event.locals.enterpriseMode) {
 		throw error(
 			403,
-			'This feature is only available in the Enterprise Edition. Please contact Open Archiver to upgrade.'
+			'This feature is only available in the Enterprise Edition. Please contact ProofArchiveSender to upgrade.'
 		);
 	}
 

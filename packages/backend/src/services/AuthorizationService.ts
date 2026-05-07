@@ -1,7 +1,7 @@
 import { IamService } from './IamService';
 import { createAbilityFor, SubjectObject } from '../iam-policy/ability';
 import { subject, Subject } from '@casl/ability';
-import { AppActions, AppSubjects } from '@open-archiver/types';
+import { AppActions, AppSubjects } from '@ProofArchiveSender/types';
 
 export class AuthorizationService {
 	private iamService: IamService;

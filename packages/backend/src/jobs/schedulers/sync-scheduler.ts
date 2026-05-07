@@ -1,7 +1,7 @@
 import { ingestionQueue } from '../queues';
 
 import { config } from '../../config';
-import { logger } from '@open-archiver/backend/config/logger';
+import { logger } from '@ProofArchiveSender/backend/config/logger';
 
 const scheduleContinuousSync = async () => {
 	// This job will run every 15 minutes

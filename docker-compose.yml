@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-    open-archiver:
+    ProofArchiveSender:
         image: logiclabshq/open-archiver:latest
-        container_name: open-archiver
+        container_name: ProofArchiveSender
         restart: unless-stopped
         ports:
             - '${PORT_FRONTEND:-3000}:3000' # Frontend
@@ -16,7 +16,7 @@ services:
             - valkey
             - meilisearch
         networks:
-            - open-archiver-net
+            - ProofArchiveSender-net
 
     postgres:
         image: postgres:17-alpine
@@ -29,7 +29,7 @@ services:
         volumes:
             - pgdata:/var/lib/postgresql/data
         networks:
-            - open-archiver-net
+            - ProofArchiveSender-net
 
     valkey:
         image: valkey/valkey:8-alpine
@@ -39,7 +39,7 @@ services:
         volumes:
             - valkeydata:/data
         networks:
-            - open-archiver-net
+            - ProofArchiveSender-net
 
     meilisearch:
         image: getmeili/meilisearch:v1.38
@@ -51,14 +51,14 @@ services:
         volumes:
             - meilidata:/meili_data
         networks:
-            - open-archiver-net
+            - ProofArchiveSender-net
 
     tika:
         image: apache/tika:3.2.2.0-full
         container_name: tika
         restart: always
         networks:
-            - open-archiver-net
+            - ProofArchiveSender-net
 
 volumes:
     pgdata:
@@ -69,5 +69,5 @@ volumes:
         driver: local
 
 networks:
-    open-archiver-net:
+    ProofArchiveSender-net:
         driver: bridge

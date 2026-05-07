@@ -8,8 +8,8 @@ dotenv.config();
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	define: {
-		// This will be 'true' only during the enterprise build process
-		'import.meta.env.VITE_ENTERPRISE_MODE': process.env.VITE_ENTERPRISE_MODE === 'true',
+		// ProofArchiveSender — all compliance features unlocked
+		'import.meta.env.VITE_ENTERPRISE_MODE': JSON.stringify('true'),
 	},
 	server: {
 		port: Number(process.env.PORT_FRONTEND) || 3000,

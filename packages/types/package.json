@@ -1,5 +1,5 @@
 {
-	"name": "@open-archiver/types",
+	"name": "@ProofArchiveSender/types",
 	"version": "0.1.4",
 	"license": "MIT License",
 	"main": "dist/index.js",

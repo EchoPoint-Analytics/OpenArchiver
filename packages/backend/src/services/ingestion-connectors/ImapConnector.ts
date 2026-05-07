@@ -4,7 +4,7 @@ import type {
 	EmailAddress,
 	SyncState,
 	MailboxUser,
-} from '@open-archiver/types';
+} from '@ProofArchiveSender/types';
 import type { IEmailConnector, ConnectorOptions } from '../EmailProviderFactory';
 import { ImapFlow } from 'imapflow';
 import { simpleParser, ParsedMail, Attachment, AddressObject, Headers } from 'mailparser';
