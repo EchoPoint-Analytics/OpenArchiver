@@ -1,6 +1,6 @@
 // packages/backend/src/iam-policy/ability.ts
 import { createMongoAbility, MongoAbility, RawRuleOf } from '@casl/ability';
-import { CaslPolicy, AppActions, AppSubjects } from '@ProofArchiveSender/types';
+import { CaslPolicy, AppActions, AppSubjects } from '@ProofArchive/types';
 import { ingestionSources, archivedEmails, users, roles } from '../database/schema';
 import { InferSelectModel } from 'drizzle-orm';
 

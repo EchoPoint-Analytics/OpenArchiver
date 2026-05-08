@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.archived_emails_page.title')} - ProofArchiveSender</title>
+	<title>{$t('app.archived_emails_page.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="mb-4 flex items-center justify-between">

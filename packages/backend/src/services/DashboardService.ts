@@ -1,5 +1,5 @@
 import { and, count, eq, gte, sql } from 'drizzle-orm';
-import type { IndexedInsights } from '@ProofArchiveSender/types';
+import type { IndexedInsights } from '@ProofArchive/types';
 
 import { archivedEmails, ingestionSources } from '../database/schema';
 import { DatabaseService } from './DatabaseService';

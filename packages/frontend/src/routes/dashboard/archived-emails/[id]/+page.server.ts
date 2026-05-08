@@ -9,7 +9,7 @@ import type {
 	EmailRetentionLabelInfo,
 	LegalHold,
 	EmailLegalHoldInfo,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 
 export const load: PageServerLoad = async (event) => {
 	try {

@@ -6,7 +6,7 @@ import type {
 	EmailDocument,
 	TopSender,
 	User,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 import { FilterBuilder } from './FilterBuilder';
 import { AuditService } from './AuditService';
 import { IngestionService } from './IngestionService';

@@ -1,6 +1,6 @@
 # Mbox Ingestion
 
-Mbox is a common format for storing email messages. This guide will walk you through the process of ingesting mbox files into ProofArchiveSender.
+Mbox is a common format for storing email messages. This guide will walk you through the process of ingesting mbox files into ProofArchive.
 
 ## 1. Exporting from Your Email Client
 
@@ -10,9 +10,9 @@ Most email clients that support mbox exports will allow you to export a folder o
 - **Gmail**: You can use Google Takeout to export your emails in mbox format.
 - **Other Clients**: Refer to your email client's documentation for instructions on how to export emails to an mbox file.
 
-## 2. Uploading to ProofArchiveSender
+## 2. Uploading to ProofArchive
 
-Once you have your `.mbox` file, you can upload it to ProofArchiveSender through the web interface.
+Once you have your `.mbox` file, you can upload it to ProofArchive through the web interface.
 
 1.  Navigate to the **Ingestion** page.
 2.  Click on the **New Ingestion** button.
@@ -28,7 +28,7 @@ Once you have your `.mbox` file, you can upload it to ProofArchiveSender through
 
 ## 3. Folder Structure
 
-ProofArchiveSender will attempt to preserve the original folder structure of your emails. This is done by inspecting the following email headers:
+ProofArchive will attempt to preserve the original folder structure of your emails. This is done by inspecting the following email headers:
 
 - `X-Gmail-Labels`: Used by Gmail to store labels.
 - `X-Folder`: A custom header used by some email clients like Thunderbird.

@@ -1,7 +1,7 @@
 import { api } from '$lib/server/api';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import type { IngestionSource, PaginatedArchivedEmails } from '@ProofArchiveSender/types';
+import type { IngestionSource, PaginatedArchivedEmails } from '@ProofArchive/types';
 
 export const load: PageServerLoad = async (event) => {
 	const { url } = event;

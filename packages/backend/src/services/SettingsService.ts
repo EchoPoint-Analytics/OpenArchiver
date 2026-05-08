@@ -1,6 +1,6 @@
 import { db } from '../database';
 import { systemSettings } from '../database/schema/system-settings';
-import type { SystemSettings, User } from '@ProofArchiveSender/types';
+import type { SystemSettings, User } from '@ProofArchive/types';
 import { AuditService } from './AuditService';
 
 const DEFAULT_SETTINGS: SystemSettings = {

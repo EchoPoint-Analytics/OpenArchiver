@@ -1,12 +1,12 @@
 # EML Import
 
-ProofArchiveSender allows you to import EML files from a zip archive. This is useful for importing emails from a variety of sources, including other email clients and services.
+ProofArchive allows you to import EML files from a zip archive. This is useful for importing emails from a variety of sources, including other email clients and services.
 
 ## Preparing the Zip File
 
 To ensure a successful import, you should compress your .eml files to one zip file according to the following guidelines:
 
-- **Structure:** The zip file can contain any number of `.eml` files, organized in any folder structure. The folder structure will be preserved in ProofArchiveSender, so you can use it to organize your emails.
+- **Structure:** The zip file can contain any number of `.eml` files, organized in any folder structure. The folder structure will be preserved in ProofArchive, so you can use it to organize your emails.
 - **Compression:** The zip file should be compressed using standard zip compression.
 
 Here's an example of a valid folder structure:
@@ -26,7 +26,7 @@ archive.zip
 
 ## Creating an EML Ingestion Source
 
-1.  Go to the **Ingestion Sources** page in the ProofArchiveSender dashboard.
+1.  Go to the **Ingestion Sources** page in the ProofArchive dashboard.
 2.  Click the **Create New** button.
 3.  Select **EML Import** as the provider.
 4.  Enter a name for the ingestion source.
@@ -41,4 +41,4 @@ archive.zip
 
 6.  Click the **Submit** button.
 
-ProofArchiveSender will then start importing the EML files from the zip archive. The ingestion process may take some time, depending on the size of the archive.
+ProofArchive will then start importing the EML files from the zip archive. The ingestion process may take some time, depending on the size of the archive.

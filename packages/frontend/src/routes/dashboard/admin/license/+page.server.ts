@@ -1,13 +1,13 @@
 import { api } from '$lib/server/api';
 import type { PageServerLoad } from './$types';
-import type { ConsolidatedLicenseStatus } from '@ProofArchiveSender/types';
+import type { ConsolidatedLicenseStatus } from '@ProofArchive/types';
 import { error } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async (event) => {
 	if (!event.locals.enterpriseMode) {
 		throw error(
 			403,
-			'This feature is only available in the Enterprise Edition. Please contact ProofArchiveSender to upgrade.'
+			'This feature is only available in the Enterprise Edition. Please contact ProofArchive to upgrade.'
 		);
 	}
 	try {

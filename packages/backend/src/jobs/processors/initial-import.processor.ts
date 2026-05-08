@@ -1,6 +1,6 @@
 import { Job } from 'bullmq';
 import { IngestionService } from '../../services/IngestionService';
-import { IInitialImportJob, IngestionStatus } from '@ProofArchiveSender/types';
+import { IInitialImportJob, IngestionStatus } from '@ProofArchive/types';
 import { EmailProviderFactory } from '../../services/EmailProviderFactory';
 import { ingestionQueue } from '../queues';
 import { SyncSessionService } from '../../services/SyncSessionService';

@@ -1,14 +1,14 @@
 # Upgrading Your Instance
 
-This guide provides instructions for upgrading your ProofArchiveSender instance to the latest version.
+This guide provides instructions for upgrading your ProofArchive instance to the latest version.
 
 ## Checking for New Versions
 
-ProofArchiveSender automatically checks for new versions and will display a notification in the footer of the web interface when an update is available. You can find a list of all releases and their release notes on the [GitHub Releases](https://github.com/LogicLabs-OU/ProofArchiveSender/releases) page.
+ProofArchive automatically checks for new versions and will display a notification in the footer of the web interface when an update is available. You can find a list of all releases and their release notes on the [GitHub Releases](https://github.com/LogicLabs-OU/ProofArchive/releases) page.
 
 ## Upgrading Your Instance
 
-To upgrade your ProofArchiveSender instance, follow these steps:
+To upgrade your ProofArchive instance, follow these steps:
 
 1.  **Pull the latest changes from the repository**:
 
@@ -27,7 +27,7 @@ To upgrade your ProofArchiveSender instance, follow these steps:
     docker compose up -d
     ```
 
-This will restart your ProofArchiveSender instance with the latest version of the application.
+This will restart your ProofArchive instance with the latest version of the application.
 
 ## Migrating Data
 
@@ -37,6 +37,6 @@ No manual intervention is required for database migrations.
 
 ## Upgrading Meilisearch
 
-When an ProofArchiveSender update includes a major version change for Meilisearch, you will need to manually migrate your search data. This process is not covered by the standard upgrade commands.
+When an ProofArchive update includes a major version change for Meilisearch, you will need to manually migrate your search data. This process is not covered by the standard upgrade commands.
 
 For detailed instructions, please see the [Meilisearch Upgrade Guide](./meilisearch-upgrade.md).

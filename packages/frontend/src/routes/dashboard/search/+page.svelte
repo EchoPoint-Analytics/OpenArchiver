@@ -13,7 +13,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { Skeleton } from '$lib/components/ui/skeleton';
-	import type { MatchingStrategy } from '@ProofArchiveSender/types';
+	import type { MatchingStrategy } from '@ProofArchive/types';
 	import CircleAlertIcon from '@lucide/svelte/icons/circle-alert';
 	import * as Alert from '$lib/components/ui/alert/index.js';
 	import { t } from '$lib/translations';
@@ -127,7 +127,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.search.title')} | ProofArchiveSender</title>
+	<title>{$t('app.search.title')} | ProofArchive</title>
 	<meta name="description" content={$t('app.search.description')} />
 </svelte:head>
 

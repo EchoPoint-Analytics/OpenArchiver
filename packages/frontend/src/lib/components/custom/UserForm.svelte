@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { User, Role } from '@ProofArchiveSender/types';
+	import type { User, Role } from '@ProofArchive/types';
 	import { Button } from '$lib/components/ui/button';
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';

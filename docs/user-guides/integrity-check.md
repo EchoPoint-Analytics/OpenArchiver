@@ -1,16 +1,16 @@
 # Integrity Check
 
-ProofArchiveSender allows you to verify the integrity of your archived emails and their attachments. This guide explains how the integrity check works and what the results mean.
+ProofArchive allows you to verify the integrity of your archived emails and their attachments. This guide explains how the integrity check works and what the results mean.
 
 ## How It Works
 
-When an email is archived, ProofArchiveSender calculates a unique cryptographic signature (a SHA256 hash) for the email's raw `.eml` file and for each of its attachments. These signatures are stored in the database alongside the email's metadata.
+When an email is archived, ProofArchive calculates a unique cryptographic signature (a SHA256 hash) for the email's raw `.eml` file and for each of its attachments. These signatures are stored in the database alongside the email's metadata.
 
 The integrity check feature recalculates these signatures for the stored files and compares them to the original signatures stored in the database. This process allows you to verify that the content of your archived emails has not been altered, corrupted, or tampered with since the moment they were archived.
 
 ## The Integrity Report
 
-When you view an email in the ProofArchiveSender interface, an integrity report is automatically generated and displayed. This report provides a clear, at-a-glance status for the email file and each of its attachments.
+When you view an email in the ProofArchive interface, an integrity report is automatically generated and displayed. This report provides a clear, at-a-glance status for the email file and each of its attachments.
 
 ### Statuses
 

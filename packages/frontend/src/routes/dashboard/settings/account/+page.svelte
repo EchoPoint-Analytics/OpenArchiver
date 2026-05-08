@@ -73,7 +73,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.account.title')} - ProofArchiveSender</title>
+	<title>{$t('app.account.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="space-y-6">

@@ -148,7 +148,7 @@
 		},
 		"setup": {
 			"title": "Seadistamine",
-			"description": "Seadistage ProofArchiveSenderi esialgne administraatorikonto.",
+			"description": "Seadistage ProofArchivei esialgne administraatorikonto.",
 			"welcome": "Tere tulemast",
 			"create_admin_account": "Alustamiseks looge esimene administraatorikonto.",
 			"first_name": "Eesnimi",

@@ -1,9 +1,9 @@
-import { StorageConfig } from '@ProofArchiveSender/types';
+import { StorageConfig } from '@ProofArchive/types';
 import 'dotenv/config';
 
 const storageType = process.env.STORAGE_TYPE;
 const encryptionKey = process.env.STORAGE_ENCRYPTION_KEY;
-const openArchiverFolderName = 'ProofArchiveSender';
+const openArchiverFolderName = 'ProofArchive';
 let storageConfig: StorageConfig;
 
 if (encryptionKey && !/^[a-fA-F0-9]{64}$/.test(encryptionKey)) {

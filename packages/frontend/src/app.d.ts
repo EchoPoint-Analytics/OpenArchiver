@@ -1,4 +1,4 @@
-import type { User } from '@ProofArchiveSender/types';
+import type { User } from '@ProofArchive/types';
 
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces

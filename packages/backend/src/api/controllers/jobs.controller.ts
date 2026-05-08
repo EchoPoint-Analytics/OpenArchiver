@@ -4,7 +4,7 @@ import {
 	IGetQueueJobsRequestParams,
 	IGetQueueJobsRequestQuery,
 	JobStatus,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 
 export class JobsController {
 	private jobsService: JobsService;

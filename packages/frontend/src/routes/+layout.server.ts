@@ -2,7 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 import 'dotenv/config';
 import { api } from '$lib/server/api';
-import type { SystemSettings } from '@ProofArchiveSender/types';
+import type { SystemSettings } from '@ProofArchive/types';
 import { version } from '../../../../package.json';
 import semver from 'semver';
 
@@ -41,7 +41,7 @@ export const load: LayoutServerLoad = async (event) => {
 	if (!lastChecked || now.getTime() - lastChecked.getTime() > 1000 * 60 * 60) {
 		try {
 			const res = await fetch(
-				'https://api.github.com/repos/LogicLabs-OU/ProofArchiveSender/releases/latest'
+				'https://api.github.com/repos/LogicLabs-OU/ProofArchive/releases/latest'
 			);
 			if (res.ok) {
 				const latestRelease = await res.json();

@@ -8,7 +8,7 @@ dotenv.config();
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	define: {
-		// ProofArchiveSender — all compliance features unlocked
+		// ProofArchive — all compliance features unlocked
 		'import.meta.env.VITE_ENTERPRISE_MODE': JSON.stringify('true'),
 	},
 	server: {

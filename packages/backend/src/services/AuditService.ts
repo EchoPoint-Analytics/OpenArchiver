@@ -5,7 +5,7 @@ import {
 	CreateAuditLogEntry,
 	GetAuditLogsOptions,
 	GetAuditLogsResponse,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 import { desc, sql, asc, and, gte, lte, eq } from 'drizzle-orm';
 import { createHash } from 'crypto';
 

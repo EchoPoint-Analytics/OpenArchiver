@@ -1,5 +1,5 @@
 {
-	"name": "@ProofArchiveSender/backend",
+	"name": "@ProofArchive/backend",
 	"version": "0.1.0",
 	"private": true,
 	"license": "SEE LICENSE IN LICENSE file",
@@ -30,7 +30,7 @@
 		"@azure/msal-node": "^3.6.3",
 		"@casl/ability": "^6.7.3",
 		"@microsoft/microsoft-graph-client": "^3.0.7",
-		"@ProofArchiveSender/types": "workspace:*",
+		"@ProofArchive/types": "workspace:*",
 		"archiver": "^7.0.1",
 		"axios": "^1.10.0",
 		"bcryptjs": "^3.0.2",

@@ -103,7 +103,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.api_keys_page.title')} - ProofArchiveSender</title>
+	<title>{$t('app.api_keys_page.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="">

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { IamService } from '../../services/IamService';
 import { PolicyValidator } from '../../iam-policy/policy-validator';
-import type { CaslPolicy } from '@ProofArchiveSender/types';
+import type { CaslPolicy } from '@ProofArchive/types';
 import { logger } from '../../config/logger';
 
 export class IamController {

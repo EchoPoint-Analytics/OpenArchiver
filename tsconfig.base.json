@@ -10,9 +10,9 @@
 		"resolveJsonModule": true,
 		"baseUrl": ".",
 		"paths": {
-			"@ProofArchiveSender/backend/*": ["packages/backend/src/*"],
-			"@ProofArchiveSender/types": ["packages/types/src/index.ts"],
-			"@ProofArchiveSender/enterprise/*": ["packages/enterprise/src/*"]
+			"@ProofArchive/backend/*": ["packages/backend/src/*"],
+			"@ProofArchive/types": ["packages/types/src/index.ts"],
+			"@ProofArchive/enterprise/*": ["packages/enterprise/src/*"]
 		}
 	}
 }

@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from 'express';
 import type { AuthService } from '../../services/AuthService';
-import type { AuthTokenPayload } from '@ProofArchiveSender/types';
+import type { AuthTokenPayload } from '@ProofArchive/types';
 import 'dotenv/config';
 import { ApiKeyService } from '../../services/ApiKeyService';
 import { UserService } from '../../services/UserService';
@@ -11,6 +11,7 @@ declare global {
 	namespace Express {
 		export interface Request {
 			user?: AuthTokenPayload;
+			locals?: Record<string, any>;
 		}
 	}
 }
@@ -34,6 +35,7 @@ export const requireAuth = (authService: AuthService) => {
 				email: user.email,
 				roles: user.role ? [user.role.name] : [],
 			};
+			req.locals = { ...req.locals, enterpriseMode: true };
 			return next();
 		}
 
@@ -46,7 +48,8 @@ export const requireAuth = (authService: AuthService) => {
 			if (!payload) {
 				return res.status(401).json({ message: 'Unauthorized: Invalid token' });
 			}
-			req.user = payload;
+		req.user = payload;
+			req.locals = { ...req.locals, enterpriseMode: true };
 			next();
 		} catch (error) {
 			console.error('Authentication error:', error);

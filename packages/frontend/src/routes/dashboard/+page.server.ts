@@ -7,7 +7,7 @@ import type {
 	IngestionSourceStats,
 	RecentSync,
 	IndexedInsights,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 
 export const load: PageServerLoad = async (event) => {
 	const fetchStats = async (): Promise<DashboardStats | null> => {

@@ -28,7 +28,7 @@
 	} from 'lucide-svelte';
 	import { page } from '$app/state';
 	import { enhance } from '$app/forms';
-	import type { LegalHold, EmailLegalHoldInfo } from '@ProofArchiveSender/types';
+	import type { LegalHold, EmailLegalHoldInfo } from '@ProofArchive/types';
 	import PostalMime, { type Attachment as PostalAttachment } from 'postal-mime';
 	import { Paperclip } from 'lucide-svelte';
 
@@ -270,7 +270,7 @@
 </script>
 
 <svelte:head>
-	<title>{email?.subject} | {$t('app.archive.title')} - ProofArchiveSender</title>
+	<title>{email?.subject} | {$t('app.archive.title')} - ProofArchive</title>
 </svelte:head>
 
 {#if email}
@@ -441,7 +441,7 @@
 							<span class="mt-1">
 								{$t('app.archive.integrity_report_description')}
 								<a
-									href="https://docs.ProofArchiveSender.com/user-guides/integrity-check.html"
+									href="https://docs.ProofArchive.com/user-guides/integrity-check.html"
 									target="_blank"
 									class="text-primary underline underline-offset-2"
 									>{$t('app.common.read_docs')}</a
@@ -541,7 +541,7 @@
 							<span class="mt-1">
 								{$t('app.archive_legal_holds.section_description')}
 								<a
-									href="https://docs.ProofArchiveSender.com/enterprise/legal-holds/guide.html"
+									href="https://docs.ProofArchive.com/enterprise/legal-holds/guide.html"
 									target="_blank"
 									class="text-primary underline underline-offset-2"
 									>{$t('app.common.read_docs')}</a
@@ -687,7 +687,7 @@
 							<span class="mt-1">
 								{$t('app.archive.retention_policy_description')}
 								<a
-									href="https://docs.ProofArchiveSender.com/enterprise/retention-policy/guide.html"
+									href="https://docs.ProofArchive.com/enterprise/retention-policy/guide.html"
 									target="_blank"
 									class="text-primary underline underline-offset-2"
 									>{$t('app.common.read_docs')}</a
@@ -782,7 +782,7 @@
 							<span class="mt-1">
 								{$t('app.archive_labels.section_description')}
 								<a
-									href="https://docs.ProofArchiveSender.com/enterprise/retention-labels/guide.html"
+									href="https://docs.ProofArchive.com/enterprise/retention-labels/guide.html"
 									target="_blank"
 									class="text-primary underline underline-offset-2"
 									>{$t('app.common.read_docs')}</a

@@ -7,7 +7,7 @@
 	import * as RadioGroup from '$lib/components/ui/radio-group';
 	import * as Select from '$lib/components/ui/select';
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
-	import type { SupportedLanguage } from '@ProofArchiveSender/types';
+	import type { SupportedLanguage } from '@ProofArchive/types';
 	import { t } from '$lib/translations';
 
 	let { data, form }: { data: PageData; form: any } = $props();
@@ -56,7 +56,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.system_settings.title')} - ProofArchiveSender</title>
+	<title>{$t('app.system_settings.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="space-y-6">

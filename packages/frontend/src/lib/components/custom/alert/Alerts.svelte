@@ -59,7 +59,7 @@
 {#if show}
 	<div
 		aria-live="assertive"
-		class="z-999999 pointer-events-none fixed inset-0 flex items-start px-4 py-6 sm:p-6"
+		class="z-999999 pointer-events-none fixed top-0 right-0 flex items-start px-4 py-6 sm:p-6"
 		in:fly={{ easing: bounceIn, x: 1000, duration: 500 }}
 		out:fade={{ duration: 100 }}
 		role="alert"

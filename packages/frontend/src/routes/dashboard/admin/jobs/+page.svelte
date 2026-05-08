@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.jobs.title')} - ProofArchiveSender</title>
+	<title>{$t('app.jobs.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="space-y-4">

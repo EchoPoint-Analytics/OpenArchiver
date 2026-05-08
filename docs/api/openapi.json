@@ -1,16 +1,16 @@
 {
 	"openapi": "3.1.0",
 	"info": {
-		"title": "ProofArchiveSender API",
+		"title": "ProofArchive API",
 		"version": "1.0.0",
-		"description": "REST API for ProofArchiveSender — an open-source email archiving platform. All authenticated endpoints require a Bearer JWT token obtained from `POST /v1/auth/login`, or an API key passed as a Bearer token.",
+		"description": "REST API for ProofArchive — an open-source email archiving platform. All authenticated endpoints require a Bearer JWT token obtained from `POST /v1/auth/login`, or an API key passed as a Bearer token.",
 		"license": {
 			"name": "SEE LICENSE IN LICENSE",
-			"url": "https://github.com/LogicLabs-OU/ProofArchiveSender/blob/main/LICENSE"
+			"url": "https://github.com/LogicLabs-OU/ProofArchive/blob/main/LICENSE"
 		},
 		"contact": {
-			"name": "ProofArchiveSender",
-			"url": "https://ProofArchiveSender.com"
+			"name": "ProofArchive",
+			"url": "https://proofarchive.co.za"
 		}
 	},
 	"servers": [
@@ -448,7 +448,7 @@
 					},
 					"storagePath": {
 						"type": "string",
-						"example": "ProofArchiveSender/attachments/abc123.pdf"
+						"example": "ProofArchive/attachments/abc123.pdf"
 					}
 				},
 				"required": ["id", "filename", "sizeBytes", "storagePath"]
@@ -2743,7 +2743,7 @@
 						"description": "The relative storage path of the file to download.",
 						"schema": {
 							"type": "string",
-							"example": "ProofArchiveSender/emails/abc123.eml"
+							"example": "ProofArchive/emails/abc123.eml"
 						}
 					}
 				],
@@ -2839,7 +2839,7 @@
 										"filePath": {
 											"type": "string",
 											"description": "The storage path of the uploaded file. Use this as `uploadedFilePath` when creating a file-based ingestion source.",
-											"example": "ProofArchiveSender/tmp/uuid-filename.pst"
+											"example": "ProofArchive/tmp/uuid-filename.pst"
 										}
 									}
 								}

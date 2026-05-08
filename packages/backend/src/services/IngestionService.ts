@@ -7,14 +7,14 @@ import type {
 	IngestionCredentials,
 	IngestionProvider,
 	PendingEmail,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 import { and, desc, eq, inArray, or } from 'drizzle-orm';
 import { CryptoService } from './CryptoService';
 import { EmailProviderFactory } from './EmailProviderFactory';
 import { ingestionQueue } from '../jobs/queues';
 import type { JobType } from 'bullmq';
 import { StorageService } from './StorageService';
-import type { IInitialImportJob, EmailObject } from '@ProofArchiveSender/types';
+import type { IInitialImportJob, EmailObject } from '@ProofArchive/types';
 import { stripAttachmentsFromEml } from '../helpers/emlUtils';
 import {
 	archivedEmails,
@@ -28,7 +28,7 @@ import { SearchService } from './SearchService';
 import { config } from '../config/index';
 import { FilterBuilder } from './FilterBuilder';
 import { AuditService } from './AuditService';
-import { User } from '@ProofArchiveSender/types';
+import { User } from '@ProofArchive/types';
 import { checkDeletionEnabled } from '../helpers/deletionGuard';
 
 export class IngestionService {

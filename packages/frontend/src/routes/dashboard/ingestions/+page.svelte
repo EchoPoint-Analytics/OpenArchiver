@@ -9,7 +9,7 @@
 	import { Checkbox } from '$lib/components/ui/checkbox';
 	import IngestionSourceForm from '$lib/components/custom/IngestionSourceForm.svelte';
 	import { api } from '$lib/api.client';
-	import type { SafeIngestionSource, CreateIngestionSourceDto } from '@ProofArchiveSender/types';
+	import type { SafeIngestionSource, CreateIngestionSourceDto } from '@ProofArchive/types';
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
 	import * as HoverCard from '$lib/components/ui/hover-card/index.js';
@@ -367,7 +367,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.ingestions.title')} - ProofArchiveSender</title>
+	<title>{$t('app.ingestions.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="">
@@ -700,7 +700,7 @@
 					<a
 						class="text-primary underline underline-offset-2"
 						target="_blank"
-						href="https://docs.ProofArchiveSender.com/user-guides/email-providers/"
+						href="https://docs.ProofArchive.com/user-guides/email-providers/"
 						>{$t('app.ingestions.docs_here')}</a
 					>.</span
 				>

@@ -271,7 +271,7 @@
 		},
 		"setup": {
 			"title": "Configuration",
-			"description": "Configurez le compte administrateur initial pour ProofArchiveSender.",
+			"description": "Configurez le compte administrateur initial pour ProofArchive.",
 			"welcome": "Bienvenue",
 			"create_admin_account": "Créez le premier compte administrateur pour commencer.",
 			"first_name": "Prénom",
@@ -691,7 +691,7 @@
 		},
 		"license_page": {
 			"title": "Statut de la licence Enterprise",
-			"meta_description": "Consultez le statut actuel de votre licence ProofArchiveSender Enterprise.",
+			"meta_description": "Consultez le statut actuel de votre licence ProofArchive Enterprise.",
 			"revoked_title": "Licence non valide",
 			"revoked_message": "Votre licence a été révoquée ou votre période de grâce pour dépassement de sièges a expiré. Toutes les fonctionnalités Enterprise sont désormais désactivées. Veuillez contacter votre gestionnaire de compte pour obtenir de l'aide.",
 			"notice_title": "Avis",

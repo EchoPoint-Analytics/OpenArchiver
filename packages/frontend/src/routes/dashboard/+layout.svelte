@@ -151,10 +151,10 @@
 </script>
 
 <header class="bg-background sticky top-0 z-40 border-b px-4 md:px-0">
-	<div class="container mx-auto flex h-16 flex-row items-center justify-between">
-		<a href="/dashboard" class="flex flex-row items-center gap-2 font-bold">
-			<img src="/logos/logo-sq.svg" alt="ProofArchiveSender Logo" class="h-8 w-8" />
-			<span class="hidden sm:inline-block">ProofArchiveSender</span>
+	<div class="container mx-auto flex h-20 flex-row items-center justify-between">
+		<a href="/dashboard" class="flex flex-row items-center gap-3 font-bold">
+			<img src="/logos/logo-sq.png" alt="ProofArchive Logo" style="height: 48px; width: auto; aspect-ratio: 569/128;" />
+			
 			{#if data.enterpriseMode}
 				<Badge class="px-1 py-0.5 text-[8px] font-bold">Enterprise</Badge>
 			{/if}

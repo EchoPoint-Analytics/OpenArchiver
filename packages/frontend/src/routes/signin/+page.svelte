@@ -1,18 +1,13 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
 	import { api } from '$lib/api.client';
-	import { authStore } from '$lib/stores/auth.store';
-	import type { LoginResponse } from '@ProofArchiveSender/types';
-	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
-	import { t } from '$lib/translations';
 
-	let email = '';
-	let password = '';
-	let isLoading = false;
+	let email = $state('');
+	let password = $state('');
+	let isLoading = $state(false);
 
 	async function handleSubmit() {
 		isLoading = true;
@@ -21,77 +16,48 @@
 				method: 'POST',
 				body: JSON.stringify({ email, password }),
 			});
-			if (!response.ok) {
-				let errorMessage = 'Failed to login';
-				try {
-					const errorData = await response.json();
-					errorMessage = errorData.message || errorMessage;
-				} catch (e) {
-					errorMessage = response.statusText;
-				}
-				throw new Error(errorMessage);
-			}
-
-			const loginData: LoginResponse = await response.json();
-			authStore.login(loginData.accessToken, loginData.user);
-			// Redirect to a protected page after login
-			goto('/dashboard');
+			const loginData = await response.json();
+			
+			document.cookie = `accessToken=${loginData.accessToken}; path=/; max-age=604800; samesite=lax`;
+			localStorage.setItem('accessToken', loginData.accessToken);
+			localStorage.setItem('user', JSON.stringify(loginData.user));
+			
+			window.location.href = '/dashboard';
 		} catch (e: any) {
-			setAlert({
-				type: 'error',
-				title: 'Login Failed',
-				message: e.message,
-				duration: 5000,
-				show: true,
-			});
-		} finally {
+			console.error('Login error:', e);
 			isLoading = false;
+			alert('Login failed: ' + e.message);
 		}
 	}
 </script>
 
 <svelte:head>
-	<title>{$t('app.auth.login')} - ProofArchiveSender</title>
-	<meta name="description" content="Login to your ProofArchiveSender account." />
+	<title>Login - ProofArchive</title>
+	<meta name="description" content="Login to your ProofArchive account." />
 </svelte:head>
 
-<div
-	class="flex min-h-screen flex-col items-center justify-center space-y-16 bg-gray-100 dark:bg-gray-900"
->
+<div class="flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900" style="height: 100vh; overflow: hidden;">
 	<div>
-		<a
-			href="https://ProofArchiveSender.com/"
-			target="_blank"
-			class="flex flex-row items-center gap-2 font-bold"
-		>
-			<img src="/logos/logo-sq.svg" alt="ProofArchiveSender Logo" class="h-16 w-16" />
-			<span class="text-2xl">ProofArchiveSender</span>
+		<a href="https://ProofArchive.co.za/" target="_blank" class="flex flex-row items-center gap-3">
+			<img src="/logos/logo-sq.png" alt="ProofArchive Logo" class="h-16 w-auto" />
 		</a>
 	</div>
-	<Card.Root class="w-full max-w-md">
-		<Card.Header class="space-y-1">
-			<Card.Title class="text-2xl">{$t('app.auth.login')}</Card.Title>
-			<Card.Description>{$t('app.auth.login_tip')}</Card.Description>
+	<Card.Root class="w-full max-w-md mt-8">
+		<Card.Header>
+			<Card.Title class="text-2xl text-center">Login</Card.Title>
 		</Card.Header>
-		<Card.Content class="grid gap-4">
-			<form onsubmit={handleSubmit} class="grid gap-4">
+		<Card.Content>
+			<form onsubmit={(e) => { e.preventDefault(); handleSubmit(); }} class="grid gap-4">
 				<div class="grid gap-2">
-					<Label for="email">{$t('app.auth.email')}</Label>
-					<Input
-						id="email"
-						type="email"
-						placeholder="m@example.com"
-						bind:value={email}
-						required
-					/>
+					<Label for="email">Email</Label>
+					<Input id="email" type="email" placeholder="m@example.com" required bind:value={email} />
 				</div>
 				<div class="grid gap-2">
-					<Label for="password">{$t('app.auth.password')}</Label>
-					<Input id="password" type="password" bind:value={password} required />
+					<Label for="password">Password</Label>
+					<Input id="password" type="password" required bind:value={password} />
 				</div>
-
-				<Button type="submit" class=" w-full" disabled={isLoading}>
-					{isLoading ? $t('app.common.working') : $t('app.auth.login')}
+				<Button type="submit" class="w-full" disabled={isLoading}>
+					{isLoading ? 'Working...' : 'Login'}
 				</Button>
 			</form>
 		</Card.Content>

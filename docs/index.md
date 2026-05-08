@@ -1,12 +1,12 @@
 # Get Started 👋
 
-Welcome to ProofArchiveSender! This guide will help you get started with setting up and using the platform.
+Welcome to ProofArchive! This guide will help you get started with setting up and using the platform.
 
-## What is ProofArchiveSender?
+## What is ProofArchive?
 
 **A secure, sovereign, and affordable open-source platform for email archiving and eDiscovery.**
 
-ProofArchiveSender provides a robust, self-hosted solution for archiving, storing, indexing, and searching emails from major platforms, including Google Workspace (Gmail), Microsoft 365, as well as generic IMAP-enabled email inboxes. Use ProofArchiveSender to keep a permanent, tamper-proof record of your communication history, free from vendor lock-in.
+ProofArchive provides a robust, self-hosted solution for archiving, storing, indexing, and searching emails from major platforms, including Google Workspace (Gmail), Microsoft 365, as well as generic IMAP-enabled email inboxes. Use ProofArchive to keep a permanent, tamper-proof record of your communication history, free from vendor lock-in.
 
 ## Key Features
 
@@ -19,7 +19,7 @@ ProofArchiveSender provides a robust, self-hosted solution for archiving, storin
 
 ## Installation
 
-To get your own instance of ProofArchiveSender running, follow our detailed installation guide:
+To get your own instance of ProofArchive running, follow our detailed installation guide:
 
 - [Installation Guide](./user-guides/installation.md)
 

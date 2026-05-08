@@ -1,6 +1,6 @@
 # Connecting Email Providers
 
-ProofArchiveSender can connect to a variety of email sources to ingest and archive your emails. This section provides guides for connecting to popular email providers.
+ProofArchive can connect to a variety of email sources to ingest and archive your emails. This section provides guides for connecting to popular email providers.
 
 Choose your provider from the list below to get started:
 

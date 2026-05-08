@@ -1,8 +1,8 @@
 import type { PageServerLoad, RequestEvent } from './$types';
 import { api } from '$lib/server/api';
-import type { SearchResult } from '@ProofArchiveSender/types';
+import type { SearchResult } from '@ProofArchive/types';
 
-import type { MatchingStrategy } from '@ProofArchiveSender/types';
+import type { MatchingStrategy } from '@ProofArchive/types';
 
 async function performSearch(
 	keywords: string,

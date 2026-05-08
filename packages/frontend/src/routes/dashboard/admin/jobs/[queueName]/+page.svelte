@@ -5,7 +5,7 @@
 	import * as Table from '$lib/components/ui/table';
 	import { Button } from '$lib/components/ui/button';
 	import { goto } from '$app/navigation';
-	import type { JobStatus } from '@ProofArchiveSender/types';
+	import type { JobStatus } from '@ProofArchive/types';
 	import * as Pagination from '$lib/components/ui/pagination/index.js';
 	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>{queue.name} - {$t('app.jobs.title')} - ProofArchiveSender</title>
+	<title>{queue.name} - {$t('app.jobs.title')} - ProofArchive</title>
 </svelte:head>
 
 <div class="space-y-4">

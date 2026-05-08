@@ -30,6 +30,13 @@ We are committed to building an engaging community around ProofArchive, and we a
 
 [![Bluesky](https://img.shields.io/badge/Follow%20us%20on%20Bluesky-0265D4?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/ProofArchive.bsky.social)
 
+## 🚀 Live demo
+
+Check out the live demo here: https://demo.proofarchive.co.za
+
+Username: demo@proofarchive.co.za
+
+Password: ProofArchive_demo
 
 ## Key Features
 
@@ -73,7 +80,7 @@ ProofArchive is built on a modern, scalable, and maintainable technology stack:
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/EchoPoint-Analytics/ProofArchive.git
+    git clone https://github.com/LogicLabs-OU/ProofArchive.git
     cd ProofArchive
     ```
 
@@ -97,6 +104,13 @@ ProofArchive is built on a modern, scalable, and maintainable technology stack:
 4.  **Access the application:**
     Once the services are running, you can access the ProofArchive web interface by navigating to `http://localhost:3000` in your web browser.
 
+## Data Source Configuration
+
+After deploying the application, you will need to configure one or more ingestion sources to begin archiving emails. Follow our detailed guides to connect to your email provider:
+
+- [Connecting to Google Workspace](https://docs.proofarchive.co.za/user-guides/email-providers/google-workspace.html)
+- [Connecting to Microsoft 365](https://docs.proofarchive.co.za/user-guides/email-providers/imap.html)
+- [Connecting to a Generic IMAP Server](https://docs.proofarchive.co.za/user-guides/email-providers/imap.html)
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 import type { Handle } from '@sveltejs/kit';
 import { jwtVerify } from 'jose';
-import type { User } from '@ProofArchiveSender/types';
+import type { User } from '@ProofArchive/types';
 import 'dotenv/config';
 
 const JWT_SECRET_ENCODED = new TextEncoder().encode(process.env.JWT_SECRET);

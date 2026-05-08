@@ -1,6 +1,6 @@
 import { relations, sql } from 'drizzle-orm';
 import { pgTable, text, timestamp, uuid, primaryKey, jsonb } from 'drizzle-orm/pg-core';
-import type { CaslPolicy } from '@ProofArchiveSender/types';
+import type { CaslPolicy } from '@ProofArchive/types';
 
 /**
  * The `users` table stores the core user information for authentication and identification.

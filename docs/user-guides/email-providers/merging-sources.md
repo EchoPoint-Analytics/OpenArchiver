@@ -20,7 +20,7 @@ This is the key design principle of merged sources:
 
 In practical terms:
 
-- The storage path for every email belongs to the root: `ProofArchiveSender/{root-name}-{root-id}/emails/...`
+- The storage path for every email belongs to the root: `ProofArchive/{root-name}-{root-id}/emails/...`
 - Every `archived_emails` database row created by a child ingestion will have `ingestionSourceId` set to the **root's ID**, not the child's.
 - Attachments are also stored under the root's folder and scoped to the root's ID.
 - The root's **Preserve Original File** (GoBD compliance) setting is inherited by all children in the group. A child's own `preserveOriginalFile` setting is ignored during ingestion — only the root's setting applies.

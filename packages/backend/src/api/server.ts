@@ -20,6 +20,7 @@ import { createSettingsRouter } from './routes/settings.routes';
 import { apiKeyRoutes } from './routes/api-key.routes';
 import { integrityRoutes } from './routes/integrity.routes';
 import { createJobsRouter } from './routes/jobs.routes';
+import { createEnterpriseRouter } from './routes/enterprise.routes';
 import { AuthService } from '../services/AuthService';
 import { AuditService } from '../services/AuditService';
 import { UserService } from '../services/UserService';
@@ -34,11 +35,11 @@ import path from 'path';
 import { logger } from '../config/logger';
 import { rateLimiter } from './middleware/rateLimiter';
 import { config } from '../config';
-import { ProofArchiveSenderFeature } from '@ProofArchiveSender/types';
+import { ProofArchiveFeature } from '@ProofArchive/types';
 // Define the "plugin" interface
 export interface ArchiverModule {
 	initialize: (app: Express, authService: AuthService) => Promise<void>;
-	name: ProofArchiveSenderFeature;
+	name: ProofArchiveFeature;
 }
 
 export let authService: AuthService;
@@ -123,6 +124,7 @@ export async function createServer(modules: ArchiverModule[] = []): Promise<Expr
 	const apiKeyRouter = apiKeyRoutes(authService);
 	const integrityRouter = integrityRoutes(authService);
 	const jobsRouter = createJobsRouter(authService);
+	const enterpriseRouter = createEnterpriseRouter(authService);
 
 	// Middleware for all other routes
 	app.use((req, res, next) => {
@@ -154,6 +156,10 @@ export async function createServer(modules: ArchiverModule[] = []): Promise<Expr
 	app.use(`/${config.api.version}/api-keys`, apiKeyRouter);
 	app.use(`/${config.api.version}/integrity`, integrityRouter);
 	app.use(`/${config.api.version}/jobs`, jobsRouter);
+	app.use(`/${config.api.version}/enterprise`, enterpriseRouter);
+
+	// Set enterprise mode flag on the Express app for middleware access
+	app.locals.enterpriseMode = true;
 
 	// Load all provided extension modules
 	for (const module of modules) {

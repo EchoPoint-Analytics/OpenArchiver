@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
-import type { User } from '@ProofArchiveSender/types';
+import type { User } from '@ProofArchive/types';
 
 interface AuthState {
 	accessToken: string | null;
@@ -12,7 +12,6 @@ const initialValue: AuthState = {
 	user: null,
 };
 
-// Function to get the initial state from localStorage
 const createAuthStore = () => {
 	const { subscribe, set } = writable<AuthState>(initialValue);
 
@@ -20,13 +19,19 @@ const createAuthStore = () => {
 		subscribe,
 		login: (accessToken: string, user: Omit<User, 'passwordHash'>) => {
 			if (browser) {
-				document.cookie = `accessToken=${accessToken}; path=/; max-age=604800; samesite=strict`;
+				// Store in localStorage as primary
+				localStorage.setItem('accessToken', accessToken);
+				localStorage.setItem('user', JSON.stringify(user));
+				// Also set cookie for SSR compatibility
+				document.cookie = `accessToken=${accessToken}; path=/; max-age=604800; samesite=lax`;
 			}
 			set({ accessToken, user });
 		},
 		logout: () => {
 			if (browser) {
-				document.cookie = 'accessToken=; path=/; max-age=-1; samesite=strict';
+				localStorage.removeItem('accessToken');
+				localStorage.removeItem('user');
+				document.cookie = 'accessToken=; path=/; max-age=-1; samesite=lax';
 			}
 			set(initialValue);
 		},

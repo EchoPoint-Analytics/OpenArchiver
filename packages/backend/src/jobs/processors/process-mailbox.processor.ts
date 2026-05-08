@@ -1,5 +1,5 @@
 import { Job } from 'bullmq';
-import { IProcessMailboxJob, ProcessMailboxError, PendingEmail } from '@ProofArchiveSender/types';
+import { IProcessMailboxJob, ProcessMailboxError, PendingEmail } from '@ProofArchive/types';
 import { IngestionService } from '../../services/IngestionService';
 import { logger } from '../../config/logger';
 import { EmailProviderFactory } from '../../services/EmailProviderFactory';

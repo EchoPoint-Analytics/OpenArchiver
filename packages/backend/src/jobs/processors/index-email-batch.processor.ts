@@ -3,8 +3,8 @@ import { IndexingService } from '../../services/IndexingService';
 import { SearchService } from '../../services/SearchService';
 import { StorageService } from '../../services/StorageService';
 import { DatabaseService } from '../../services/DatabaseService';
-import { PendingEmail } from '@ProofArchiveSender/types';
-import { logger } from '@ProofArchiveSender/backend/config/logger';
+import { PendingEmail } from '@ProofArchive/types';
+import { logger } from '@ProofArchive/backend/config/logger';
 
 const searchService = new SearchService();
 const storageService = new StorageService();

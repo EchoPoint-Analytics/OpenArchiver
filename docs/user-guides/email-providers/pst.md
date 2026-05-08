@@ -1,17 +1,17 @@
 # PST Import
 
-ProofArchiveSender allows you to import PST files. This is useful for importing emails from a variety of sources, including Microsoft Outlook.
+ProofArchive allows you to import PST files. This is useful for importing emails from a variety of sources, including Microsoft Outlook.
 
 ## Preparing the PST File
 
 To ensure a successful import, you should prepare your PST file according to the following guidelines:
 
-- **Structure:** The PST file can contain any number of emails, organized in any folder structure. The folder structure will be preserved in ProofArchiveSender, so you can use it to organize your emails.
-- **Password Protection:** ProofArchiveSender does not support password-protected PST files. Please remove the password from your PST file before importing it.
+- **Structure:** The PST file can contain any number of emails, organized in any folder structure. The folder structure will be preserved in ProofArchive, so you can use it to organize your emails.
+- **Password Protection:** ProofArchive does not support password-protected PST files. Please remove the password from your PST file before importing it.
 
 ## Creating a PST Ingestion Source
 
-1.  Go to the **Ingestion Sources** page in the ProofArchiveSender dashboard.
+1.  Go to the **Ingestion Sources** page in the ProofArchive dashboard.
 2.  Click the **Create New** button.
 3.  Select **PST Import** as the provider.
 4.  Enter a name for the ingestion source.
@@ -26,4 +26,4 @@ To ensure a successful import, you should prepare your PST file according to the
 
 6.  Click the **Submit** button.
 
-ProofArchiveSender will then start importing the emails from the PST file. The ingestion process may take some time, depending on the size of the file.
+ProofArchive will then start importing the emails from the PST file. The ingestion process may take some time, depending on the size of the file.

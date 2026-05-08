@@ -4,7 +4,7 @@ import type {
 	EmailAddress,
 	SyncState,
 	MailboxUser,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 import type { IEmailConnector, ConnectorOptions } from '../EmailProviderFactory';
 import { simpleParser, ParsedMail, Attachment, AddressObject } from 'mailparser';
 import { logger } from '../../config/logger';

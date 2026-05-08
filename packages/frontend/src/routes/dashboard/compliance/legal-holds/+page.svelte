@@ -12,7 +12,7 @@
 	import { enhance } from '$app/forms';
 	import { MoreHorizontal, Plus, ShieldCheck } from 'lucide-svelte';
 	import { setAlert } from '$lib/components/custom/alert/alert-state.svelte';
-	import type { LegalHold } from '@ProofArchiveSender/types';
+	import type { LegalHold } from '@ProofArchive/types';
 
 	let { data }: { data: PageData; form: ActionData } = $props();
 
@@ -74,7 +74,7 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.legal_holds.title')} - ProofArchiveSender</title>
+	<title>{$t('app.legal_holds.title')} - ProofArchive</title>
 	<meta name="description" content={$t('app.legal_holds.meta_description')} />
 	<meta
 		name="keywords"

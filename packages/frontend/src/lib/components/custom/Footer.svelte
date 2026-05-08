@@ -27,7 +27,7 @@
 			{/if}
 			<p class="text-balance text-center text-xs font-medium leading-loose">
 				© {new Date().getFullYear()}
-				<a href="https://ProofArchiveSender.com/" target="_blank">ProofArchiveSender</a>
+				<a href="https://ProofArchive.co.za/" target="_blank">ProofArchive</a>
 			</p>
 			<p class="text-balance text-center text-xs font-medium leading-loose">
 				Version: {currentVersion}

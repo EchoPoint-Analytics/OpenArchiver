@@ -1,5 +1,5 @@
 {
-	"name": "@ProofArchiveSender/frontend",
+	"name": "@ProofArchive/frontend",
 	"private": true,
 	"license": "SEE LICENSE IN LICENSE file",
 	"version": "0.0.1",
@@ -15,7 +15,7 @@
 	},
 	"dependencies": {
 		"@iconify/svelte": "^5.0.1",
-		"@ProofArchiveSender/types": "workspace:*",
+		"@ProofArchive/types": "workspace:*",
 		"@sveltejs/kit": "^2.38.1",
 		"clsx": "^2.1.1",
 		"d3-shape": "^3.2.0",

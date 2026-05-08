@@ -15,7 +15,7 @@
 		ConditionOperator,
 		LogicalOperator,
 		SafeIngestionSource,
-	} from '@ProofArchiveSender/types';
+	} from '@ProofArchive/types';
 
 	interface Props {
 		/** Existing policy to edit; undefined means create mode */

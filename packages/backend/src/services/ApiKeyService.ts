@@ -3,7 +3,7 @@ import { db } from '../database';
 import { apiKeys } from '../database/schema/api-keys';
 import { CryptoService } from './CryptoService';
 import { and, eq } from 'drizzle-orm';
-import { ApiKey, User } from '@ProofArchiveSender/types';
+import { ApiKey, User } from '@ProofArchive/types';
 import { AuditService } from './AuditService';
 
 export class ApiKeyService {

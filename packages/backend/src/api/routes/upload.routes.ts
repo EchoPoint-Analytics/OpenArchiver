@@ -46,7 +46,7 @@ export const createUploadRouter = (authService: AuthService): Router => {
 	 *                 filePath:
 	 *                   type: string
 	 *                   description: The storage path of the uploaded file. Use this as `uploadedFilePath` when creating a file-based ingestion source.
-	 *                   example: "ProofArchiveSender/tmp/uuid-filename.pst"
+	 *                   example: "ProofArchive/tmp/uuid-filename.pst"
 	 *       '400':
 	 *         description: Invalid multipart request.
 	 *         content:

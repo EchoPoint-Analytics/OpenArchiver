@@ -20,11 +20,11 @@
 </script>
 
 <svelte:head>
-	<title>{$t('app.dashboard_page.title')} - ProofArchiveSender</title>
+	<title>{$t('app.dashboard_page.title')} - ProofArchive</title>
 	<meta name="description" content={$t('app.dashboard_page.meta_description')} />
 </svelte:head>
 
-<div class="flex-1 space-y-4">
+<div class="flex flex-col min-h-0 flex-1 space-y-4">
 	<div class="flex items-center justify-between space-y-2">
 		<h2 class="text-3xl font-bold tracking-tight">{$t('app.dashboard_page.header')}</h2>
 	</div>

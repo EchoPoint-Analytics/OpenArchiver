@@ -4,7 +4,7 @@ import type {
 	EmailAddress,
 	SyncState,
 	MailboxUser,
-} from '@ProofArchiveSender/types';
+} from '@ProofArchive/types';
 import type { IEmailConnector, ConnectorOptions } from '../EmailProviderFactory';
 import { PSTFile, PSTFolder, PSTMessage } from 'pst-extractor';
 import { simpleParser, ParsedMail, Attachment, AddressObject } from 'mailparser';
@@ -356,8 +356,8 @@ export class PSTConnector implements IEmailConnector {
 
 	private async constructEml(msg: PSTMessage): Promise<string> {
 		let eml = '';
-		const boundary = '----boundary-ProofArchiveSender';
-		const altBoundary = '----boundary-ProofArchiveSender_alt';
+		const boundary = '----boundary-ProofArchive';
+		const altBoundary = '----boundary-ProofArchive_alt';
 
 		let headers = '';
 

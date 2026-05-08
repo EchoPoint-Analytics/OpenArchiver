@@ -1,5 +1,5 @@
 import { api } from '$lib/server/api';
-import type { SystemSettings } from '@ProofArchiveSender/types';
+import type { SystemSettings } from '@ProofArchive/types';
 import { error, fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 
