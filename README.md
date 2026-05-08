@@ -9,17 +9,17 @@
 
 **A secure, sovereign, and open-source platform for email archiving.**
 
-ProofArchiveSender provides a robust, self-hosted solution for archiving, storing, indexing, and searching emails from major platforms, including Google Workspace (Gmail), Microsoft 365, PST files, as well as generic IMAP-enabled email inboxes. Use ProofArchiveSender to keep a permanent, tamper-proof record of your communication history, free from vendor lock-in.
+ProofArchive provides a robust, self-hosted solution for archiving, storing, indexing, and searching emails from major platforms, including Google Workspace (Gmail), Microsoft 365, PST files, as well as generic IMAP-enabled email inboxes. Use ProofArchiveSender to keep a permanent, tamper-proof record of your communication history, free from vendor lock-in.
 
 ## Screenshots
 
-![ProofArchiveSender Preview](assets/screenshots/dashboard-1.png)
+![ProofArchive Preview](assets/screenshots/dashboard-1.png)
 _Dashboard_
 
-![ProofArchiveSender Preview](assets/screenshots/archived-emails.png)
+![ProofArchive Preview](assets/screenshots/archived-emails.png)
 _Archived emails_
 
-![ProofArchiveSender Preview](assets/screenshots/search.png)
+![ProofArchive Preview](assets/screenshots/search.png)
 _Full-text search across all your emails and attachments_
 
 ## Join our community!
